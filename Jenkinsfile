@@ -65,7 +65,7 @@ pipeline {
         }        
         stage ('Retrive downstream job') {
             steps {
-               build job: '1641-test-job2',
+               build job: '1641-job2-pipeline',
                 parameters: [string(name: 'upstream_job_name', value: JOB_NAME),
                              string(name: 'artifact_id', value: artifact_id)],
                 wait: false
